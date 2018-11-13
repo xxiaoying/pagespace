@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loading效果</title>
+    <style type="text/css">
+        .loading {
+            text-align: center;
+        }
+        .loading div{
+            width: 6px;height: 50px;background: red;
+            display: inline-block;
+            /*margin-right: 1px;*/
+            animation:animate-loading 1.2s ease infinite;
+        }
+
+        .loading > div:nth-child(2){
+            -webkit-animation-delay:-1.1s;
+        }
+        .loading > div:nth-child(3){
+            -webkit-animation-delay:-1.0s;
+        }
+
+        .loading > div:nth-child(4){
+            -webkit-animation-delay:-0.9s;
+        }
+
+        .loading > div:last-child{
+            -webkit-animation-delay:-0.8s;
+        }
+
+        @-webkit-keyframes animate-loading{
+            0%,40%,100%{
+                -webkit-transform:scaleY(.4);
+            }
+            20%{
+                -webkit-transform:scaleY(1);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="loading">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+</body>
+</html>

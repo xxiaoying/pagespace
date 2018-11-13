@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSS实现span里面的字体旋转</title>
+    <style type="text/css">
+        .icon-over {
+            width:65px;
+            height:65px;
+            line-height:65px;
+            text-align:center;
+            border:1px solid #EF784B;
+            color: #EF784B;
+            font-size:12px;
+            border-radius: 50%;
+            transform:rotate(-30deg);
+        }
+
+        .icon-triangle {
+            position: relative;
+            width:0;
+            height:0;
+            border-width:65px;
+            border-style: dashed  dashed solid dashed ;
+            border-color: transparent  transparent #55E557 transparent;
+            transform:rotate(-45deg);
+        }
+        .icon-triangle div{
+            width: 50px;
+            position: absolute;
+            color: #fff;
+            /*transform:rotate(-0deg);*/
+            top:25px;
+            left: -16px;
+        }
+
+        .parallelogram {
+            width: 100px !important;
+            height: 120px;
+            transform:skew(-30deg); /*设置倾斜度为-30*/
+            -webkit-transform: skew(-30deg);
+            -moz-transform: skew(-30deg);
+            -o-transform:skew(-30deg);
+            -ms-transform:skew(-30deg);
+            background-color: #55E557;
+            margin: 50px 0px 0px 50px;
+        }
+
+
+        .icon-font {
+            width:34px;
+            height:35px;
+            line-height:35px;
+            text-align:center;
+           background: #e7a532;
+            color: #fff;
+            font-size:24px;
+            transform:rotate(-15deg);
+            float: left
+        }
+         .guo{
+            background: #bc7ef1;
+            transform:rotate(15deg);
+        }
+    </style>
+</head>
+<body>
+
+<div class="icon-over" style="font-size:18px;">已预约</div>
+
+<div class="icon-triangle" style="font-size:18px;">
+    <div>新品</div>
+</div>
+
+<div class="parallelogram"></div>
+
+<div style="margin-top: 30px;">
+    <div class="icon-font" >
+        结
+    </div>
+    <div class="icon-font guo" >
+        果
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>移动端开关按钮</title>
+  <style type="text/css">
+      /*
+      1.设置多选框隐藏
+      2.设置label背景，for属性可以与表单元素配对，将其与 input checkbox 绑定，当点击label时，checkbox 会获得焦点
+      3.label设置问背景，加载后添加开关，并设置过度动画
+      */
+      .toggle{position: relative;}
+      .toggle_checkbox{display: none}
+      .toggle_btn, .toggle_btn:after, .toggle_btn:before,
+      .toggle_text, .toggle_text:after, .toggle_text:before{
+          /*过渡: 顾名思义从某某属性多少过度到某某属性多少
+            <' transition-property '>： 检索或设置对象中的参与过渡的属性
+            <' transition-duration '>： 检索或设置对象过渡的持续时间
+            <' transition-timing-function '>： 检索或设置对象中过渡的动画类型
+            <' transition-delay '>： 检索或设置对象延迟过渡的时间
+          如：left 0 到 left 10,切记初始left:0也要设置
+          */
+          transition: all 250ms ease-in;
+      }
+      .toggle_btn{
+          display: block;
+          width: 72px;
+          height: 30px;
+          border-radius: 28px;
+          background: #8c8c8c;
+      }
+      .toggle_btn:after{
+          content: " ";
+          width: 30px;
+          height: 30px;
+          left: 42px; /* 刚开始没设置 没有过度动画*/
+          border-radius: 28px;
+          background: #ff4e4e;
+          position: absolute;
+          top:0px;
+      }
+      .toggle .toggle_checkbox:checked + .toggle_btn{
+          background: #2c96bd;
+      }
+      .toggle .toggle_checkbox:checked + .toggle_btn:after{
+          left: 0px;
+      }
+
+      /* 添加文字 */
+      .toggle_text{}
+      .toggle_text{
+          display: block;
+          height: 30px;
+          position: relative;
+          color: #fff;
+      }
+      .toggle_text:before, .toggle_text:after{
+          position: absolute;
+          top: 4px;
+      }
+      .toggle_text:before{
+          content: attr(data-label-on);
+          top:2px;
+          left: 12px;
+      }
+      .toggle_text:after{
+          content: attr(data-label-off);
+          right: -60px;
+      }
+
+      .toggle .toggle_checkbox:checked + .toggle_btn .toggle_text:before{
+          left: -60px;
+      }
+      .toggle .toggle_checkbox:checked + .toggle_btn .toggle_text:after{
+         right: 12px;
+      }
+  </style>
+
+</head>
+<body>
+
+
+<div class="toggle">
+    <input type="checkbox" id="toggle_swtich" class="toggle_checkbox">
+    <label class="toggle_btn" for="toggle_swtich"><span class="toggle_text" data-label-on="on" data-label-off="off"></span></label>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+@import url(https://fonts.googleapis.com/css?family=Francois+One);
+@import url(https://fonts.googleapis.com/css?family=PT+Sans);
+@font-face {
+  font-family: 'Audiowide';
+  font-style: normal;
+  font-weight: 400;
+  src: local("Audiowide"), local("Audiowide-Regular"), url(http://themes.googleusercontent.com/static/fonts/audiowide/v2/8XtYtNKEyyZh481XVWfVOj8E0i7KZn-EPnyo3HZu7kw.woff) format("woff");
+}
+body {
+  font-size: 62.5%;
+  background-color: #fff;
+  margin: 10px;
+  border: 1px solid #333;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+

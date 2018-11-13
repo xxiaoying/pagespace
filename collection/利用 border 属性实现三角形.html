@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用 border 属性实现三角形</title>
+    <style type="text/css">
+        .triangle{
+            width:30px;
+            height:30px;
+            border-width:20px;
+            border-style:solid;
+            border-color:#e66161 #f3bb5b #94e24f #85bfda;
+        }
+        .triangle1{
+            width:0;
+            height:0;
+            border-width:35px;
+            border-style:solid dashed dashed dashed;
+            border-color:#e66161 transparent transparent transparent;
+        }
+
+        /*注：IE6下把边框设置成 transparent 时会出现黑影，并不会透明，把 border-style 设置成 dashed 可以解决。*/
+
+        .message-box {
+            position:relative;
+            width:240px;
+            height:60px;
+            line-height:60px;
+            background:#E9FBE4;
+            /*box-shadow:1px 2px 3px #E9FBE4;*/
+            border:1px solid #C9E9C0;
+            border-radius:4px;
+            text-align:center;
+            color:#0C7823;
+        }
+        .triangle-css3 {
+            position:absolute;
+            bottom:-8px;
+            bottom:-7px;
+            left:30px;
+            overflow:hidden;
+            width:13px;
+            height:13px;
+            background:#E9FBE4;
+            border-bottom:1px solid #C9E9C0;
+            border-right:1px solid #C9E9C0;
+        }
+        .transform {
+            -webkit-transform:rotate(45deg);
+            -moz-transform:rotate(45deg);
+            -o-transform:rotate(45deg);
+            transform:rotate(45deg);
+        }
+        /*ie7-9*/
+        /*.ie-transform-filter {*/
+        /*-ms-filter: "progid:DXImageTransform.Microsoft.Matrix(*/
+        /*M11=0.7071067811865475,*/
+        /*M12=-0.7071067811865477,*/
+        /*M21=0.7071067811865477,*/
+        /*M22=0.7071067811865475,*/
+        /*SizingMethod='auto expand')";*/
+        /*filter: progid:DXImageTransform.Microsoft.Matrix(*/
+        /*M11=0.7071067811865475,*/
+        /*M12=-0.7071067811865477,*/
+        /*M21=0.7071067811865477,*/
+        /*M22=0.7071067811865475,*/
+        /*SizingMethod='auto expand');*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+<div class="triangle"></div>
+<p></p>
+<div class="triangle1"></div>
+
+
+<div class="message-box">
+    <span>css transfrom 属性</span>
+    <div class="triangle-css3 transform ie-transform-filter"></div>
+</div>
+
+</body>
+</html>
